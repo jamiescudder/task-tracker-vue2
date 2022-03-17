@@ -1,5 +1,6 @@
 <template>
   <div id="navbtns">
+    <!-- TODO: Add font awesome icons -->
     <a>
       <router-link class="icon-text" to="/">
         <fa class="icon" icon="house" />
