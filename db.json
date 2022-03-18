@@ -4,19 +4,25 @@
       "id": 1,
       "text": "Go to dentist",
       "day": "March 10th at 4pm",
-      "reminder": true
+      "reminder": false
     },
     {
       "text": "Go to ASDA",
       "day": "March 10th at 4pm",
-      "reminder": false,
+      "reminder": true,
       "id": 2
     },
     {
       "text": "Pick up dry cleaning",
       "day": "April 12th at 2pm",
-      "reminder": true,
+      "reminder": false,
       "id": 3
+    },
+    {
+      "id": 4,
+      "text": "Go to dentista",
+      "day": "March 10th at 4pm",
+      "reminder": false
     }
   ]
 }

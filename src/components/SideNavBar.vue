@@ -3,19 +3,19 @@
     <!-- TODO: Add font awesome icons -->
     <a>
       <router-link class="icon-text" to="/">
-        <fa class="icon" icon="house" />
+        <!-- <fa class="icon" icon="house" /> -->
         Home
       </router-link>
     </a>
     <a>
       <router-link class="icon-text" to="/tasks">
-        <fa class="icon" icon="gears" />
+        <!-- <fa class="icon" icon="gears" /> -->
         Tasks
       </router-link>
     </a>
     <a>
       <router-link class="icon-text" to="/about">
-        <fa class="icon" icon="book" />
+        <!-- <fa class="icon" icon="book" /> -->
         About
       </router-link>
     </a>
@@ -26,7 +26,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "side-navbar",
+  name: "side-navbar"
 });
 </script>
 

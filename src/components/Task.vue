@@ -24,7 +24,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-    name: "task-item",
+  name: "task-item",
 	props: {
 		task: Object,
 	},

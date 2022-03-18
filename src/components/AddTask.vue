@@ -49,69 +49,69 @@ export default Vue.extend({
   },
   data() {
     return {
-      task: {
-          id: 0,
-          text: "",
-          day: "",
-          reminder: false
-      } as taskObject
-    };
+      id: 0,
+      text: "",
+      day: "",
+      reminder: false
+    } as taskObject;
   },
   watch: {
     //looking for a change to this data and then call loadtask functin
     loadEditTask(): void {
-      if (this.loadEditTask != {}) {
+      if (this.loadEditTask.id !== 0) {
         this.loadTask(this.$store.state.loadEditTask);
       }
     },
     text(): void {
       // if user deletes task then reset form
-      if (this.task.id !== null && this.task.text === "") {
+      if (this.id !== 0 && this.text === "") {
         var resetTask: boolean = confirm("Do you want to reset the task form?");
         if (resetTask) {
-          this.task.id = 0;
-          this.task.day = "";
-          this.task.reminder = false;
+          this.id = 0;
+          this.text = "";
+          this.day = "";
+          this.reminder = false;
         }
       }
     },
   },
   methods: {
-    onSubmit( e: any ): void {
+    onSubmit( e: Event ): void {
       e.preventDefault();
 
-      if ( !this.task.text ) {
+      if ( !this.text ) {
         alert("Please add a task name");
         return;
       }
 
-      if ( this.task.id === 0 ) {
+      if ( this.id === 0 ) {
         const newTask = {
-          text: this.task.text,
-          day: this.task.day,
-          reminder: this.task.reminder,
+          id: 0,
+          text: this.text,
+          day: this.day,
+          reminder: this.reminder,
         };
         this.$store.dispatch("addTask", newTask);
       } else {
         const newTask = {
           id: this.loadEditTask.id,
-          text: this.task.text,
-          day: this.task.day,
-          reminder: this.task.reminder,
+          text: this.text,
+          day: this.day,
+          reminder: this.reminder,
         };
         this.$store.dispatch("addTask", newTask);
       }
-      this.task.id = 0;
-      this.task.text = "";
-      this.task.day = "";
-      this.task.reminder = false;
+      this.id = 0;
+      this.text = "";
+      this.day = "";
+      this.reminder = false;
     },
     loadTask( task: taskObject ): void {
       // load task
-      this.task.id = task.id;
-      this.task.text = task.text;
-      this.task.day = task.day;
-      this.task.reminder = task.reminder;
+      this.id = task.id;
+      this.text = task.text;
+      this.day = task.day;
+      this.reminder = task.reminder;
     },
   },
 });

@@ -20,7 +20,7 @@ export default Vue.extend({
     AddTask,
   },
   // data() {},
-  async created() {
+  created(): void {
     this.$store.state.tasks = this.$store.dispatch("fetchTasks");
   },
 });

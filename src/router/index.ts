@@ -14,8 +14,8 @@ const routes: Array<RouteConfig> = [
     component: HomeView
   },
   {
-    path: '/tracker',
-    name: 'tracker',
+    path: '/tasks',
+    name: 'tasks',
     component: TrackerView
   },
   {
@@ -30,7 +30,9 @@ const routes: Array<RouteConfig> = [
 ]
 
 const router = new VueRouter({
-  routes
+  // history: createWebHistory(process.env.BASE_URL),
+  routes,
+  mode: 'history'
 })
 
 export default router

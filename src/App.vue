@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <NavBar />
+    <SideNavBar />
     <Header :showAddTask="$store.state.showAddTask" />
 
     <router-view :showAddTask="$store.state.showAddTask"></router-view>
@@ -12,14 +12,14 @@
 import Vue from "vue";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
-import NavBar from "./components/NavBar.vue";
+import SideNavBar from "./components/SideNavBar.vue";
 
 export default Vue.extend({
   name: "App",
   components: {
     Header,
     Footer,
-    NavBar,
+    SideNavBar,
   },
 });
 </script>
