@@ -20,5 +20,14 @@ npm run build
 npm run lint
 ```
 
+### Run json backend
+Make sure you create a file in root called db.json (if you don't have one) then run the following command
+{
+	tasks: []
+}
+```
+npm run backend
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
